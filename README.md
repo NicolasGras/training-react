@@ -22,3 +22,15 @@ ReactDOM.render(
     document.getElementById('root')
 );
 ```
+
+**Constructor definition**
+
+```
+constructor(props) {
+  super(props);         // Must be set otherwise nothing can be set in constructor
+                        // "Syntax error: 'this' is not allowed before super()"
+  this.state = {
+    value: null
+  }
+}
+```
