@@ -63,7 +63,30 @@ class Board extends React.Component {
       );
     }
 }
-
 ```
 
+**Functional Compomnents**
+
+These 2 codes are equivalent
+
+```
+class Square extends React.Component {
+   render() {
+     return (
+       <button className="square" onClick={() => this.props.onClick()}>
+         {this.props.value}
+       </button>
+     );
+   } 
+}
+```
+```
+function Square(props) {
+  return (
+    <button className="square" onClick={props.onClick}>
+      {props.value}
+    </button>
+  );
+}
+```
 
