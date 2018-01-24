@@ -22,12 +22,16 @@ class Board extends React.Component {
 
   hancleClick(i) {
     const tmp = this.state.squares.slice();
-    tmp[i] = this.state.xIsNext ? 'X' : 'O';
-    this.setState({
-        squares: tmp,
-        xIsNext: !this.state.xIsNext
-      }
-    );
+    
+    if(tmp[i] == null) {
+      tmp[i] = this.state.xIsNext ? 'X' : 'O';
+      this.setState({
+          squares: tmp,
+          xIsNext: !this.state.xIsNext
+        }
+      );
+    }
+
   }
   
   renderSquare(i) {
